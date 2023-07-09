@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cars</title>
+  <style>
+    * {
+      margin: 0%;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100%;
+      min-height: 100vh;
+    }
+
+    h1 {
+      margin-left: 40px;
+    }
+
+    header>h1::before {
+      content: '';
+      position: absolute;
+      width: 250px;
+      height: 35px;
+      object-fit: cover;
+      background: url(rr.png);
+      background-size: contain;
+      object-position: center;
+      background-repeat: no-repeat;
+      left: 0;
+
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 15px;
+      align-items: center;
+      animation: header 2s ease-in-out;
+    }
+
+    @keyframes header {
+      0% {
+        transform: translateY(-100px)
+      }
+    }
+
+    ul>li {
+      list-style: none;
+      display: inline-block;
+      font-weight: 600;
+      margin: 10px 20px;
+    }
+
+    .main {
+      width: 100%;
+      display: flex;
+    }
+
+    .content {
+      width: 50%;
+      margin-top: 8%;
+      margin-left: 3%;
+      animation: content 2s ease-in-out;
+    }
+
+    @keyframes content {
+      0% {
+        transform: translateX(-50%)
+      }
+    }
+
+    .content h2 {
+      font-size: 80px;
+      margin-bottom: 1%;
+      letter-spacing: 8px;
+    }
+
+    .content h3 {
+      font-size: 25px;
+      margin-bottom: 3%;
+    }
+
+    .content p {
+      font-size: 20px;
+      margin-bottom: 3%;
+      font-family: Verdana, Geneva, sans-serif;
+    }
+
+    button {
+      padding: 15px 30px;
+      border-radius: 10px;
+      margin: 6px;
+      background-color: transparent;
+      transition: all .5s ease;
+    }
+
+    button:hover {
+      background-color: black;
+      color: white;
+    }
+
+    .image {
+      width: 50%;
+      margin-top: 12%;
+      margin-right: 3%;
+      z-index: -1;
+    }
+
+    img {
+      width: 100%;
+      animation: car 3s ease-in-out;
+
+    }
+
+    @keyframes car {
+      0% {
+        transform: translateX(100%)
+      }
+    }
+
+    @media screen and (max-width:1200px) {
+      .content {
+        width: 100%;
+        text-align: center;
+      }
+
+      .image {
+        width: 100%;
+        margin-top: 12%;
+        margin-right: 3%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        bottom: -5%;
+      }
+
+      img {
+        width: 50%;
+      }
+    }
+
+    @media screen and (max-width:576px) {
+      .content {
+        width: 100%;
+        text-align: center;
+      }
+
+      .content h2,
+      .content h3,
+      .content p {
+        margin-bottom: 5%;
+      }
+
+      .image {
+        width: 100%;
+        margin-top: 12%;
+        margin-right: 3%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        bottom: -5%;
+      }
+
+      img {
+        width: 80%;
+      }
+
+      ul>li {
+        list-style: none;
+        display: inline-block;
+        font-weight: 700;
+        margin: 10px 5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Rolls-Royce</h1>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>Collections</li>
+        <li>About</li>
+      </ul>
+    </nav>
+  </header>
+  <div class="main">
+    <div class="content">
+      <h2>GHOST</h2>
+      <h3>PURE EXPRESSION</h3>
+      <p>Ghost presents a world of boundless potential. Its purity liberates the imagination, inviting you to craft a
+        motor car that is a complete original. There are no limits to what Ghost can become — all one has to do is
+        imagine.</p>
+      <button>MAKE AN ENQUIRY
+      </button>
+      <button>VIEW IN DETAIL
+      </button>
+    </div>
+    <div class="image">
+      <img src="car.png" alt="">
+    </div>
+  </div>
+</body>
+
+</html>
